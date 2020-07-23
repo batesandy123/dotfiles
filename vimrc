@@ -1,10 +1,43 @@
+" Use bash as the standard shell, and allow it to source our .bashrc so we get
+" all our juicy aliases and paths set up properly
+set shell=/bin/bash
+
+let g:python_highlight_all = 1
+
+" Set up vim for the most incompatible vi experience: ie. let vim stand by its
+" name 'Vi IMproved'
+set nocompatible
+" Setup vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage itself
+Plugin 'gmarik/Vundle.vim'
+
+" Installed plugins
+Plugin 'tomasr/molokai'
+" Plugin 'sheerun/vim-polyglot'
+" Plugin 'vim-python/python-syntax'
+" Plugin 'klen/python-mode'
+" Plugin 'morhetz/gruvbox'
+
+call vundle#end()
+filetype plugin indent on    " required
+
+set background=dark
+colorscheme molokai
+
+" Custom commands
+syntax on
+filetype on
+
 :let mapleader = "-"
 :let maplocalleader = "\\"
 :nnoremap <leader>e :vsplit $MYVIMRC<cr>
 :nnoremap <leader>s :source $MYVIMRC<cr>
 
 :nnoremap \ x
-:iabbrev adn and
 
 :nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 :vnoremap qq <esc>`>a'<esc>`<i'<esc>
