@@ -17,7 +17,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Installed plugins
 Plugin 'tomasr/molokai'
-" Plugin 'sheerun/vim-polyglot'
+Plugin 'sheerun/vim-polyglot'
 " Plugin 'vim-python/python-syntax'
 " Plugin 'klen/python-mode'
 " Plugin 'morhetz/gruvbox'
